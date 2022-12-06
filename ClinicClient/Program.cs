@@ -11,15 +11,15 @@ namespace ClinicClient
             AppContext.SetSwitch(
                 "System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
 
-            using var channel = GrpcChannel.ForAddress("http://localhost:5001");
+            using var channel = GrpcChannel.ForAddress("http://localhost:5888");
             ClinicServiceClient clinicServiceClient = new ClinicServiceClient(channel);
 
             var createClientResponse = clinicServiceClient.CreateClinet(new CreateClientRequest
             {
-                Document = "DOC34 445",
-                FirstName = "Станислав",
-                Patronymic = "Антонович",
-                Surname = "Байраковский"
+                Document = "DOC77 888",
+                FirstName = "Артем",
+                Patronymic = "Павлович ",
+                Surname = "Химин"
             });
 
             if (createClientResponse.ErrCode == 0)

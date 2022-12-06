@@ -15,7 +15,7 @@ namespace ClinicService
 
             builder.WebHost.ConfigureKestrel(options =>
             {
-                options.Listen(IPAddress.Any, 5001, listenOptions =>
+                options.Listen(IPAddress.Any, 5888, listenOptions =>
                 {
                     listenOptions.Protocols = HttpProtocols.Http2;
                 });
